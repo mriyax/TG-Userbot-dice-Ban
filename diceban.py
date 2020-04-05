@@ -69,7 +69,7 @@ async def dice_listener(event: NewMessage.Event) -> None:
                 view_messages=False
             )
             href = f"[{get_display_name(sender)}](tg://user?id={sender.id})"
-            await event.answer(f'`Banned {href} for rolling a dice!`')
+            await event.answer(f'{href} `was banned for rolling a dice!`')
         except Exception:
             pass
         if event.chat.creator or event.chat.admin_rights.delete_messages:
