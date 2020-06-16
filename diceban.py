@@ -107,7 +107,7 @@ async def inc_handler(event):
             else:
                 group = f"**{chat.title}** `{chat.id}`"
             await client.send_message(
-                entity, f'{adder} `has added you to` {group}'
+                entity, f'{adder} (`{added_by.id}`) `has added you to` {group} (`{chat.id}`)'
             )
 
 
